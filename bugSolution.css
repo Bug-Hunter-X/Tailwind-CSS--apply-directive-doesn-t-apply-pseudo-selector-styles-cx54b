@@ -1,0 +1,21 @@
+Instead of using `@apply` with a class that includes pseudo-selectors, apply the styles directly within your component's styles.  For example, instead of:
+
+```css
+.button {
+  @apply bg-blue-500 hover:bg-blue-700;
+}
+```
+
+Use:
+
+```css
+.button {
+  background-color: blue;
+}
+
+.button:hover {
+  background-color: darkblue;
+}
+```
+
+This ensures that the styles for the `:hover` state are correctly applied.
